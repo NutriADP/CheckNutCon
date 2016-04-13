@@ -2,6 +2,8 @@ package br.com.checknutconcon.checknutcon;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class CheckNutConMain extends AppCompatActivity {
 
@@ -9,5 +11,17 @@ public class CheckNutConMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_nut_con_main);
+    }
+
+    public boolean OnCreateContextMenuListener(Menu menu){
+    getMenuInflater().inflate(R.menu.menu_check_nut_con_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+
+
     }
 }
