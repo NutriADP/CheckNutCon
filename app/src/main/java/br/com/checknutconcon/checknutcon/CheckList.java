@@ -2,29 +2,25 @@ package br.com.checknutconcon.checknutcon;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.*;
 import android.widget.*;
+import android.view.*;
 
-public class BemVindo extends AppCompatActivity implements View.OnClickListener{
+public class CheckList extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnCadastrar;
-    private Button btnSair;
-
+    private Button btnNovaConsultoria;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bem_vindo);
+        setContentView(R.layout.check_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        btnCadastrar = (Button)findViewById(R.id.btnCadastrar);
-        btnSair = (Button)findViewById(R.id.btnSair);
 
-        btnCadastrar.setOnClickListener(this);
+        btnNovaConsultoria = (Button)findViewById(R.id.btnNovaConsultoria);
+        btnNovaConsultoria.setOnClickListener(this);
+
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -36,10 +32,10 @@ public class BemVindo extends AppCompatActivity implements View.OnClickListener{
         });*/
     }
 
+
     @Override
     public void onClick(View v) {
-
-        Intent it = new  Intent (this, CadastroDoNutricionista.class);
-        startActivity(it);
+        Intent intent = new Intent(this, NovaConsultoria.class);
+        startActivity(intent);
     }
 }
